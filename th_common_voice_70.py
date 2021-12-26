@@ -122,21 +122,21 @@ class CommonVoice(datasets.GeneratorBasedBuilder):
             datasets.SplitGenerator(
                 name=datasets.Split.TRAIN,
                 gen_kwargs={
-                    "filepath": os.path.join(abs_path_to_data, "train.tsv"),
+                    "filepath": os.path.join(abs_path_to_data, "train_cleaned.tsv"),
                     "path_to_clips": abs_path_to_clips,
                 },
             ),
             datasets.SplitGenerator(
                 name=datasets.Split.TEST,
                 gen_kwargs={
-                    "filepath": os.path.join(abs_path_to_data, "test.tsv"),
+                    "filepath": os.path.join(abs_path_to_data, "test_cleaned.tsv"),
                     "path_to_clips": abs_path_to_clips,
                 },
             ),
             datasets.SplitGenerator(
                 name=datasets.Split.VALIDATION,
                 gen_kwargs={
-                    "filepath": os.path.join(abs_path_to_data, "dev.tsv"),
+                    "filepath": os.path.join(abs_path_to_data, "dev_cleaned.tsv"),
                     "path_to_clips": abs_path_to_clips,
                 },
             ),
